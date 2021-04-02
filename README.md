@@ -2,7 +2,7 @@
 Touch
 在开发移动端的应用中会使用到很多的手势操作，例如一指拖动、两指旋转等等，为了方便开放者快速集成这些手势，在Clouda中内置了事件和手势库Library.touch，下面将详细的介绍如何使用Library.touch。
 
-手势事件处理类API目前支持以下功能：
+### 手势事件处理类API目前支持以下功能：
 
     事件配置
     事件代理
@@ -12,16 +12,12 @@ Touch
     触发事件
     事件配置
 
-touch.config(config)
+## touch.config(config)
 
-功能描述：
-
-对手势事件库进行全局配置。
+功能描述：对手势事件库进行全局配置。
 
 参数描述：
-
     config为一个对象
-
     {
         tap: true,                  //tap类事件开关, 默认为true
         doubleTap: true,            //doubleTap事件开关， 默认为true
@@ -35,13 +31,11 @@ touch.config(config)
         pinch: true,                //pinch类事件开关
     }
     
-事件代理
+## 事件代理
 
     touch.on( delegateElement, types, selector, callback );
 
-功能描述：
-
-事件代理方法。
+功能描述：事件代理方法。
 
 参数描述：
 
@@ -52,7 +46,7 @@ touch.config(config)
     callback	function	事件处理函数，如需了解手势库支持的新属性，详见《事件对象》
     **
 
-手势事件类型
+## 手势事件类型
 
 **
 
@@ -89,7 +83,7 @@ touch.config(config)
         
 更多使用实例请参考http://code.baidu.com
 
-**事件对象**
+## **事件对象**
 
 事件处理函数的第一个参数为事件对象，除了原生属性之外，百度手势库还提供了部分新属性。
 
@@ -111,13 +105,11 @@ touch.config(config)
         factor	swipe事件加速度因子
         startRotate	启动单指旋转方法，在某个元素的touchstart触发时调用
         
-事件绑定
+## 事件绑定
 
     touch.on( element, types, callback );
 
-功能描述：
-
-事件绑定方法，根据参数区分事件绑定和事件代理。
+功能描述：事件绑定方法，根据参数区分事件绑定和事件代理。
 
 参数描述：
 
@@ -126,13 +118,11 @@ touch.config(config)
     types	string	事件的类型, 可接受多个事件以空格分开，支持原生事件的透传。具体参数说明，同“事件代理”方法中的“types”参数说明。
     callback	function	事件处理函数，具体参数说明，同“事件代理”方法中的“callback”参数说明。
     
-解除事件代理
+## 解除事件代理
 
     touch.off( delegateElement, types, selector, callback )
     
-功能描述：
-
-解除某元素上的事件代理。
+功能描述：解除某元素上的事件代理。
 
 参数描述：
 
@@ -141,13 +131,12 @@ touch.config(config)
     types	string	事件的类型，具体参数说明，同“事件代理”方法中的“types”参数说明。
     selector	string	代理子元素选择器
     callback	function	事件处理函数, 移除函数与绑定函数必须为同一引用。具体参数说明，同“事件代理”方法中的“callback”参数说明。
-解除事件绑定
+
+## 解除事件绑定
 
     touch.off( element, types, callback )
     
-功能描述：
-
-解除某元素上的事件绑定，根据参数区分事件绑定和事件代理。
+功能描述：解除某元素上的事件绑定，根据参数区分事件绑定和事件代理。
 
 参数描述：
 
@@ -156,16 +145,17 @@ touch.config(config)
     types	string	事件的类型，具体参数说明，同“事件代理”方法中的“types”参数说明。
     callback	function	事件处理函数, 移除函数与绑定函数必须为同一引用;具体参数说明，同“事件代理”方法中的“callback”参数说明。
     
-触发事件
+## 触发事件
 
     touch.trigger(element, type);
     
-功能描述：
-
-触发某个元素上的某事件。
+功能描述：触发某个元素上的某事件。
 
 参数描述：
 
     参数	类型	描述
     element	element或string	元素对象或选择器
     type	string	事件的类型，具体参数说明，同“事件代理”方法中的“types”参数说明。
+    
+    
+    
